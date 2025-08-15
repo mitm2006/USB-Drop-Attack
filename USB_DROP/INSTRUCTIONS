@@ -1,0 +1,9 @@
+Attack Mechanism:
+Prior to execution, the folder name Trash1000 is programmatically renamed to .Trash1000. The prefixed dot marks the folder as hidden in most operating systems, simulating a system trash directory. This reduces the likelihood of drawing user attention and,
+in some cases, may avoid triggering certain antivirus heuristics. Once the designated PDF within this hidden directory is opened, the payload executes,
+capturing target data and transmitting it via a hidden channel to a remote Google Form endpoint.
+
+Disclaimer:
+This proof-of-concept is intended strictly for educational and authorized penetration testing purposes.
+Unauthorized deployment of such techniques is illegal and unethical, and may lead to severe legal consequences.
+All demonstrations were conducted in isolated, controlled environments with explicit consent.
